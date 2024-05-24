@@ -1,2 +1,32 @@
 # Crowdfunding_ETL
-Given crowdfunding data, built an ETL pipeline using Python, Pandas, and Python dictionary methods and regular expressions to extract and transform the data and load it into a SQL database.
+## General Overview
+- Given crowdfunding data, we built an ETL pipeline using Python, Pandas, and Python dictionary methods and regular expressions to extract and transform the data and load it into a SQL database.
+## Tasks
+- Create the Category and Subcategory DataFrames
+    - A "category_id" column that has entries going sequentially from "cat1" to "catn", where n is the number of unique categories
+    - A "category" column that contains only the category titles
+    - Export the category DataFrame as category.csv and save it to your GitHub repository.
+    - A "subcategory_id" column that has entries going sequentially from "subcat1" to "subcatn", where n is the number of unique subcategories
+    - A "subcategory" column that contains only the subcategory titles
+    - Export the subcategory DataFrame as subcategory.csv and save it to your GitHub repository.
+- Create the Campaign DataFrame
+    - Extract and transform the crowdfunding.xlsx Excel data to create a campaign DataFrame
+    - Export the campaign DataFrame as campaign.csv and save it to your GitHub repository.
+- Create the Contacts DataFrame
+    - Import the contacts.xlsx file into a DataFrame.
+    - Iterate through the DataFrame, converting each row to a dictionary.
+    - Iterate through each dictionary, doing the following:
+        - Extract the dictionary values from the keys by using a Python list comprehension.
+        - Add the values for each row to a new list.
+    - Create a new DataFrame that contains the extracted data.
+    - Split each "name" column value into a first and last name, and place each in a new column.
+    - Clean and export the DataFrame as contacts.csv and save it to your GitHub repository.
+- Create the Crowdfunding Database
+    - Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site..
+    - Use the information from the ERD to create a table schema for each CSV file.
+    - Save the database schema as a Postgres file named crowdfunding_db_schema.sql, and save it to your GitHub repository.
+    - Create a new Postgres database, named crowdfunding_db.
+    - Using the database schema, create the tables in the correct order to handle the foreign keys.
+    - Verify the table creation by running a SELECT statement for each table
+    - Import each CSV file into its corresponding SQL table.
+    - Verify that each table has the correct data by running a SELECT statement for each.
